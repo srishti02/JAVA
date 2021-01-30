@@ -44,6 +44,7 @@ public class RunTestCases {
   public static void main(String[] args) {
 
     // Question 1
+    System.out.println("*****Question 1 Results*****");
     System.out.println("Enter number of strings for random generation : ");
     int elementCount = obj.nextInt();
 
@@ -54,6 +55,7 @@ public class RunTestCases {
     insertStringsToHash();
 
     // Question 2
+    System.out.println("*****Question 2 Results*****");
     int processInsertedString = 0;
     do {
       System.out.println("Choose and enter [1/2]: ");
@@ -76,6 +78,7 @@ public class RunTestCases {
     findAndRemoveStringsFromHash();
 
     // Question 3
+    System.out.println("*****Question 3 Results*****");
     for(int i = 1; i <= 20; ++i)
     {
       System.out.println();
