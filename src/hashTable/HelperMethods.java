@@ -3,11 +3,15 @@ package hashTable;
 import java.util.Vector;
 import java.util.Random;
 
+/**
+ * @description This class implements the common methods required by different
+ *              hash table implementation classes.
+ */
 public class HelperMethods {
 
   public static final int DEFAULT_TABLE_SIZE = 100;
 
-  public static Vector<String> generateRandomString(int count) {
+  public static Vector<String> generateRandomStrings(int count) {
 
     int stringLen = 10;
     Vector<String> randomGenStrVec = new Vector<String>();

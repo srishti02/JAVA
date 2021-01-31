@@ -6,6 +6,9 @@ import java.util.Collections;
 import java.util.Random;
 import java.util.stream.IntStream;
 
+/**
+ * @description This class runs the test cases for Lab-Assignment-1 Ques 4 and 5.
+ */
 public class RunTestCases {
 
   public static BinarySearchTree<Integer> bst;
@@ -15,6 +18,11 @@ public class RunTestCases {
 
   public static long totalTime = 0;
 
+  /**
+   * @brief Solution to COMP-8547 Assignment-1 Q4
+   *
+   * @param inputSize is the no. of elements to be inserted in tree 
+   */
   public static void runQuestion4TestCases(int inputSize) {
 
     bst = new BinarySearchTree<Integer>();
@@ -29,6 +37,7 @@ public class RunTestCases {
 
     //------------------------------Q4a - BST----------------------------------
     totalTime = 0;
+    /** For each integer in range 1 to inputSize, insert it in BST*/
     IntStream.rangeClosed(1,inputSize).forEach(RunTestCases::insertInBst);
 
     System.out.println("Average time to insert in BST: " + String.format(
@@ -36,6 +45,7 @@ public class RunTestCases {
 
     //------------------------------Q4a - AVL----------------------------------
     totalTime = 0;
+    /** For each integer in range 1 to inputSize, insert it in AVL*/
     IntStream.rangeClosed(1,inputSize).forEach(RunTestCases::insertInAvl);
 
     System.out.println("Average time to insert in AVL: " + String.format(
@@ -43,6 +53,7 @@ public class RunTestCases {
 
     //------------------------------Q4a - RedBlackBST----------------------------------
     totalTime = 0;
+    /** For each integer in range 1 to inputSize, insert it in Red Black BST*/
     IntStream.rangeClosed(1,inputSize).forEach(RunTestCases::insertInRedBlackBst);
 
     System.out.println("Average time to insert in RedBlackBST: " + String.format(
@@ -50,6 +61,7 @@ public class RunTestCases {
 
     //------------------------------Q4a - Splay Tree----------------------------------
     totalTime = 0;
+    /** For each integer in range 1 to inputSize, insert it in Splay tree*/
     IntStream.rangeClosed(1,inputSize).forEach(RunTestCases::insertInSplayTree);
 
     System.out.println("Average time to insert in Splay Tree: " + String.format(
@@ -62,6 +74,8 @@ public class RunTestCases {
 
     //------------------------------Q4b - BST----------------------------------
     totalTime = 0;
+    /** For each integer in IntStream of random integers generated in the range
+     * 1 to inputSize+1, perform search operation in BST*/
     new Random().ints(inputSize,1,inputSize + 1).forEach(RunTestCases::findInBst);
 
     System.out.println("Average time to search in BST: " + String.format(
@@ -69,6 +83,8 @@ public class RunTestCases {
 
     //------------------------------Q4b - AVL----------------------------------
     totalTime = 0;
+    /** For each integer in IntStream of random integers generated in the range
+     * 1 to inputSize+1, perform search operation in AVL*/
     new Random().ints(inputSize,1,inputSize + 1).forEach(RunTestCases::findInAvl);
 
     System.out.println("Average time to search in AVL: " + String.format(
@@ -76,6 +92,8 @@ public class RunTestCases {
 
     //------------------------------Q4b - RedBlackBST----------------------------------
     totalTime = 0;
+    /** For each integer in IntStream of random integers generated in the range
+     * 1 to inputSize+1, perform search operation in Red black BST*/
     new Random().ints(inputSize,1,inputSize + 1).forEach(RunTestCases::findInRedBlackBst);
 
     System.out.println("Average time to search in RedBlackBST: " + String.format(
@@ -83,6 +101,8 @@ public class RunTestCases {
 
     //------------------------------Q4b - Splay Tree----------------------------------
     totalTime = 0;
+    /** For each integer in IntStream of random integers generated in the range
+     * 1 to inputSize+1, perform search operation in Splay tree*/
     new Random().ints(inputSize,1,inputSize + 1).forEach(RunTestCases::findInSplayTree);
 
     System.out.println("Average time to search in Splay Tree: " + String.format(
@@ -96,6 +116,8 @@ public class RunTestCases {
     
     //------------------------------Q4c - BST----------------------------------
     totalTime = 0;
+    /** Iterate over reversed IntStream of sequence of integers i.e., from 
+     * 1,00,000 to 1, and remove elements from BST*/
     IntStream.rangeClosed(1,inputSize)
       .boxed()
       .sorted(Collections.reverseOrder())
@@ -106,6 +128,8 @@ public class RunTestCases {
 
     //------------------------------Q4c - AVL----------------------------------
     totalTime = 0;
+    /** Iterate over reversed IntStream of sequence of integers i.e., from 
+     * 1,00,000 to 1, and remove elements from AVL*/
     IntStream.rangeClosed(1,inputSize)
       .boxed()
       .sorted(Collections.reverseOrder())
@@ -116,6 +140,8 @@ public class RunTestCases {
 
     //------------------------------Q4c - RedBlackBST----------------------------------
     totalTime = 0;
+    /** Iterate over reversed IntStream of sequence of integers i.e., from 
+     * 1,00,000 to 1, and remove elements from Red Black BST*/
     IntStream.rangeClosed(1,inputSize)
       .boxed()
       .sorted(Collections.reverseOrder())
@@ -126,6 +152,8 @@ public class RunTestCases {
 
     //------------------------------Q4c - Splay Tree----------------------------------
     totalTime = 0;
+    /** Iterate over reversed IntStream of sequence of integers i.e., from 
+     * 1,00,000 to 1, and remove elements from Splay tree*/
     IntStream.rangeClosed(1,inputSize)
       .boxed()
       .sorted(Collections.reverseOrder())
@@ -149,6 +177,8 @@ public class RunTestCases {
     
     //------------------------------Q5a - BST----------------------------------
     totalTime = 0;
+    /** For each integer in IntStream of random integers generated in the range
+     * 1 to inputSize+1, perform insert operation in BST*/
     new Random().ints(inputSize,1,inputSize + 1).forEach(RunTestCases::insertInBst);
 
     System.out.println("Average time to insert in BST: " + String.format(
@@ -156,6 +186,8 @@ public class RunTestCases {
 
     //------------------------------Q5a - AVL----------------------------------
     totalTime = 0;
+    /** For each integer in IntStream of random integers generated in the range
+     * 1 to inputSize+1, perform insert operation in AVL*/
     new Random().ints(inputSize,1,inputSize + 1).forEach(RunTestCases::insertInAvl);
 
     System.out.println("Average time to insert in AVL: " + String.format(
@@ -163,6 +195,8 @@ public class RunTestCases {
 
     //------------------------------Q5a - RedBlackBST---------------------------
     totalTime = 0;
+    /** For each integer in IntStream of random integers generated in the range
+     * 1 to inputSize+1, perform insert operation in Red black BST*/
     new Random().ints(inputSize,1,inputSize + 1).forEach(RunTestCases::insertInRedBlackBst);
 
     System.out.println("Average time to insert in RedBlackBST: " + String.format(
@@ -170,6 +204,8 @@ public class RunTestCases {
 
     //------------------------------Q5a - Splay---------------------------------
     totalTime = 0;
+    /** For each integer in IntStream of random integers generated in the range
+     * 1 to inputSize+1, perform insert operation in Splay tree*/
     new Random().ints(inputSize,1,inputSize + 1).forEach(RunTestCases::insertInSplayTree);
 
     System.out.println("Average time to insert in Splay Tree: " + String.format(
@@ -183,6 +219,8 @@ public class RunTestCases {
 
     //------------------------------Q5b - BST----------------------------------
     totalTime = 0;
+    /** For each integer in IntStream of random integers generated in the range
+     * 1 to inputSize+1, perform search operation in BST*/
     new Random().ints(inputSize,1,inputSize + 1).forEach(RunTestCases::findInBst);
 
     System.out.println("Average time to search in BST: " + String.format(
@@ -190,6 +228,8 @@ public class RunTestCases {
 
     //------------------------------Q5b - AVL----------------------------------
     totalTime = 0;
+    /** For each integer in IntStream of random integers generated in the range
+     * 1 to inputSize+1, perform search operation in AVL*/
     new Random().ints(inputSize,1,inputSize + 1).forEach(RunTestCases::findInAvl);
 
     System.out.println("Average time to search in AVL: " + String.format(
@@ -197,6 +237,8 @@ public class RunTestCases {
 
     //------------------------------Q5b - RedBlackBST----------------------------------
     totalTime = 0;
+    /** For each integer in IntStream of random integers generated in the range
+     * 1 to inputSize+1, perform search operation in Red Black BST*/
     new Random().ints(inputSize,1,inputSize + 1).forEach(RunTestCases::findInRedBlackBst);
 
     System.out.println("Average time to search in RedBlackBST: " + String.format(
@@ -204,6 +246,8 @@ public class RunTestCases {
 
     //------------------------------Q5b - Splay Tree----------------------------------
     totalTime = 0;
+    /** For each integer in IntStream of random integers generated in the range
+     * 1 to inputSize+1, perform search operation in Splay tree*/
     new Random().ints(inputSize,1,inputSize + 1).forEach(RunTestCases::findInSplayTree);
 
     System.out.println("Average time to search in Splay Tree: " + String.format(
@@ -217,6 +261,8 @@ public class RunTestCases {
 
     //------------------------------Q5c - BST----------------------------------
     totalTime = 0;
+    /** For each integer in IntStream of random integers generated in the range
+     * 1 to inputSize+1, perform remove operation in BST*/
     new Random().ints(inputSize,1,inputSize + 1).forEach(RunTestCases::removeFromBst);
 
     System.out.println("Average time to remove from BST: " + String.format(
@@ -224,6 +270,8 @@ public class RunTestCases {
 
     //------------------------------Q5c - AVL----------------------------------
     totalTime = 0;
+    /** For each integer in IntStream of random integers generated in the range
+     * 1 to inputSize+1, perform remove operation in AVL*/
     new Random().ints(inputSize,1,inputSize + 1).forEach(RunTestCases::removeFromAvl);
 
     System.out.println("Average time to remove from AVL: " + String.format(
@@ -231,6 +279,8 @@ public class RunTestCases {
 
     //------------------------------Q5c - RedBlackBST----------------------------------
     totalTime = 0;
+    /** For each integer in IntStream of random integers generated in the range
+     * 1 to inputSize+1, perform remove operation in Red Black BST*/
     new Random().ints(inputSize,1,inputSize + 1).forEach(RunTestCases::removeFromRedBlackBst);
 
     System.out.println("Average time to remove from RedBlackBST: " + String.format(
@@ -238,6 +288,8 @@ public class RunTestCases {
 
     //------------------------------Q5c - Splay Tree----------------------------------
     totalTime = 0;
+    /** For each integer in IntStream of random integers generated in the range
+     * 1 to inputSize+1, perform remove operation in Splay tree*/
     new Random().ints(inputSize,1,inputSize + 1).forEach(RunTestCases::removeFromSplayTree);
 
     System.out.println("Average time to remove from Splay Tree: " + String.format(
@@ -362,11 +414,8 @@ public class RunTestCases {
 
   public static void main(String[] args) {
 
-    for(int i=10; i<=100000; ) {
-      runQuestion4TestCases(i);
-      runQuestion5TestCases(i);
-      i *= 10;
-    }
+      runQuestion4TestCases(100000);
+      runQuestion5TestCases(100000);
   }
 
 }

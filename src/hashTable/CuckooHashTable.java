@@ -2,6 +2,13 @@ package hashTable;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * @description A generic class implementing HashTable interface and Cuckoo
+ *              technique of hashing.
+ *              In this, if an element is already present at the hash index, it
+ *              is evicted and replaced by the new element. Then a new location
+ *              is calculated for the evicted element.
+ */
 public class CuckooHashTable<Type> implements HashTable<Type> {
 
   private Type [][]_table;

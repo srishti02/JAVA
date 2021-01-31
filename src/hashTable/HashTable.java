@@ -1,7 +1,7 @@
 package hashTable;
 
 /**
- * @description An generic interface with basic methods of a hash-table 
+ * @description A generic interface with basic methods of a hash-table 
  *              incorporated to ensure basic functionality is supported by each
  *              hashtable implementation.
  */

@@ -4,8 +4,10 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * @description A generic class implementing HashTable interface and Separate
+ * @description A generic class implementing HashTable interface and Quadratic
  *              Probing technique of hashing.
+ *              In this, if the hash-index is already occupied, the next index
+ *              is tried with an offset of ( pow((offset + 1),2) ).
  */
 public class QuadraticProbingHashTable<Type> implements HashTable<Type> {
 
@@ -52,7 +54,7 @@ public class QuadraticProbingHashTable<Type> implements HashTable<Type> {
       hashId = getCompressedHash((int)(hashId + Math.pow(probe,2)));
       ++probe;
 
-      /** check for long cycle*/
+      /** check for long cycle (50% of the table or more is full) */
       if( ++counter >= _tableSize/2 ) {
         //System.out.println("Rehash Needed");
         rehash();

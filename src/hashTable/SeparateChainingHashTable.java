@@ -8,7 +8,7 @@ import java.util.Set;
 /**
  * @description A generic class implementing HashTable interface and Separate
  *              Chaining technique of hashing.
- *              In this, chain of elements are stored for each table index.
+ *              In this, chain of elements is stored for each table index.
  */
 public class SeparateChainingHashTable<Type> implements HashTable<Type> {
 
