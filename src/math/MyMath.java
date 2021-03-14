@@ -5,7 +5,7 @@ import java.util.stream.LongStream;
 /**
  * @description Class to support basic math operations.
  */
-public class Math 
+public class MyMath 
 {
   /** PI value*/
   final static double PI = 3.141592653589793;
@@ -101,11 +101,18 @@ public class Math
     if( exponent == 0 )
       return result;
 
+    if( ((Double)exponent).isNaN() )
+      return Double.NaN;
+
     double tempExponent = exponent;
-    if( tempExponent < 0 )
+
+    while(tempExponent < 0)
     {
-      result = result / base;
-      tempExponent++;
+      if( tempExponent < 0 )
+      {
+        result = result / base;
+        tempExponent++;
+      }
     }
 
     if( exponent > 0 )
@@ -173,7 +180,7 @@ public class Math
   public static void main(String[] args)
   {
     System.out.println(fact(5));
-    System.out.println(pow(-2,0));
+    System.out.println(pow(9,-2));
     System.out.println(Trigonometry.sin(10));
     System.out.println(Trigonometry.cos(10));
     System.out.println(Trigonometry.tan(10));
