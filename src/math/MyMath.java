@@ -28,7 +28,7 @@ public class MyMath
      *
      * @return result
      */
-    public static double sin(double angle)
+    public static double sin(double angle) throws FactorialException
     {
     	double result = 0;
       double normalisedAngle = normalizeRadian(angle);
@@ -54,7 +54,7 @@ public class MyMath
      *
      * @return result
      */
-    public static double cos(double angle)
+    public static double cos(double angle) throws FactorialException
     {
     	double result = 1;
       double normalisedAngle = normalizeRadian(angle);
@@ -80,7 +80,7 @@ public class MyMath
      *
      * @return result
      */
-    public static double tan(double angle)
+    public static double tan(double angle) throws FactorialException
     {
     	return sin(angle)/cos(angle);
     }
@@ -94,14 +94,14 @@ public class MyMath
    *
    * @return return result
    */
-  public static double pow(double base, double exponent)
+  public static double pow(double base, int exponent)
   {
     double result = 1;
 
     if( exponent == 0 )
       return result;
 
-    if( ((Double)exponent).isNaN() )
+    if( ((Double)base).isNaN() )
       return Double.NaN;
 
     double tempExponent = exponent;
@@ -133,8 +133,12 @@ public class MyMath
    *
    * @return result
    */
-  public static long fact(int num)
+  public static long fact(int num) throws FactorialException
   {
+    if( num < 0 )
+      throw new FactorialException("Invalid input for calculating factorial : " +
+          num);
+
     return LongStream.rangeClosed(1,num).reduce(
         1, (long x, long y) -> x * y);
   }
@@ -179,13 +183,19 @@ public class MyMath
   
   public static void main(String[] args)
   {
-    System.out.println(fact(5));
-    System.out.println(pow(9,-2));
-    System.out.println(Trigonometry.sin(10));
-    System.out.println(Trigonometry.cos(10));
-    System.out.println(Trigonometry.tan(10));
-    System.out.println(Trigonometry.sin(degreesToRadian(90)));
-    System.out.println(degreesToRadian(90));
-    System.out.println(Trigonometry.cos(degreesToRadian(90)));
+    try {
+      System.out.println(fact(2));
+
+      System.out.println(pow(Double.NaN,3));
+      System.out.println(Trigonometry.sin(10));
+      System.out.println(Trigonometry.cos(10));
+      System.out.println(Trigonometry.tan(10));
+      System.out.println(Trigonometry.sin(degreesToRadian(90)));
+      System.out.println(degreesToRadian(90));
+      System.out.println(Trigonometry.cos(degreesToRadian(90)));
+    } catch (FactorialException e) {
+      // TODO Auto-generated catch block
+      e.printStackTrace();
+    }
   }
 }
