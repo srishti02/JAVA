@@ -7,8 +7,9 @@ import org.junit.jupiter.api.Test;
 import math.MyMath.Trigonometry;
 
 class Trigonometry_pow_MathVsLib_Accuracy {
-	double actual=0.0;
+	
 	double expected=0.0;
+double actual=0.0;
 	MyMath mymath=new MyMath();
 
 	@Test()
