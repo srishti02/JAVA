@@ -11,17 +11,57 @@ class Trigonometry_boundary_exception {
 	double expected=0.0;
 	MyMath mymath=new MyMath();
 
+/*
+ * tan (9999999999)
+cos (5/0)
 
+Double[] a = {90,180}
+tan (a[2])
 
-	@Test()
-	void tan1pt5() throws FactorialException {
-		actual=Trigonometry.tan(1.57079);
-	   System.out.println(Math.tan(1.57079));
- 	   System.out.println("The value of tan(1.57079) is " +actual);
-	    //To validate the value of tan 1.57079
-	 	assertEquals(6.3267948967760925E-6,actual , "Expected is :6.3267948967760925E-6 Actual is " +actual);        
+Same applicable on sin and cos.
+degreeToRadians((0.8E60*1)+1%0)
+
+ */
+
+/*	@Test()
+	void tan9999999999() throws FactorialException {
+		actual=Trigonometry.tan(9999999999);
+	   System.out.println(Math.tan(9999999999));
+ 	   System.out.println("The value of tan(9999999999) is " +actual);
+	    //To validate the value of tan 9999999999
 
            
 	}
 
-		}
+	@Test()
+	void cos5div0() throws FactorialException {
+		actual=Trigonometry.cos(5/0);
+	   System.out.println(Math.cos(5/0));
+ 	   System.out.println("The value of cos(5/0) is " +actual);
+	    //To validate the value of cos 5/0
+
+           
+	}
+	@Test()
+	void tanArrayOutofBound() throws FactorialException {
+		double[] a = {90,180};
+		actual=Trigonometry.tan(a[2]);
+	   System.out.println(Math.tan(a[2]));
+ 	   System.out.println("The value of tan(a[2]) is " +actual);
+	    //To validate the value of tan a[2]
+
+           
+	}	*/
+	
+	@Test()
+	void degToRad() throws FactorialException {
+		double[] a = {90,180};
+		actual=MyMath.degreesToRadian(((0.8E60*1)+1%0));
+	   System.out.println(Math.toRadians(((0.8E60*1)+1%0)));
+ 	   System.out.println("The value of toRad((0.8E60*1)+1%0)) is " +actual);
+	    //To validate the value of toRadians((0.8E60*1)+1%0)
+
+           
+	}	
+	
+}
