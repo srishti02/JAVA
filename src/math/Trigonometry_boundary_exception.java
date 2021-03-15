@@ -11,19 +11,7 @@ class Trigonometry_boundary_exception {
 	double expected=0.0;
 	MyMath mymath=new MyMath();
 
-/*
- * tan (9999999999)
-cos (5/0)
-
-Double[] a = {90,180}
-tan (a[2])
-
-Same applicable on sin and cos.
-degreeToRadians((0.8E60*1)+1%0)
-
- */
-
-/*	@Test()
+	@Test()
 	void tan9999999999() throws FactorialException {
 		actual=Trigonometry.tan(9999999999);
 	   System.out.println(Math.tan(9999999999));
@@ -51,7 +39,7 @@ degreeToRadians((0.8E60*1)+1%0)
 	    //To validate the value of tan a[2]
 
            
-	}	*/
+	}	
 	
 	@Test()
 	void degToRad() throws FactorialException {
