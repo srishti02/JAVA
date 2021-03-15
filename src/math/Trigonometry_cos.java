@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import math.MyMath.Trigonometry;
 
-class Trigonometry_pow_cos {
+class Trigonometry_cos {
 	double actual=0.0;
 	double expected=0.0;
 	MyMath mymath=new MyMath();

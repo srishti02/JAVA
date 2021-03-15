@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import math.MyMath.Trigonometry;
 
-class Trigonometry_pow_radtodeg {
+class Trigonometry_radtodeg {
 	double actual=0.0;
 	double expected=0.0;
 	MyMath mymath=new MyMath();

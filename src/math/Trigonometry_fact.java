@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-class Trigonometry_pow_fact {
+class Trigonometry_fact {
 	long actual=0;
 	long expected=0;
 	@Test()

@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import math.MyMath.Trigonometry;
 
-class Trigonometry_pow_normalRad {
+class Trigonometry_normalRad {
 	double actual=0.0;
 	double expected=0.0;
 	MyMath mymath=new MyMath();
