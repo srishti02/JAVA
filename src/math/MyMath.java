@@ -152,7 +152,7 @@ public class MyMath
    * @return result in radians
    */
   public static double degreesToRadian(double angle)
-  {
+  {System.out.println("Angle is "+angle);
     return (PI * angle) / 180;
   }
 

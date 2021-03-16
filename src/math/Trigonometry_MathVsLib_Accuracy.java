@@ -1,27 +1,45 @@
 package math;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Assert;
+import org.junit.Test;
 
 import math.MyMath.Trigonometry;
+/*
+ *  * @author Srishti Jain , Margaret
 
-class Trigonometry_MathVsLib_Accuracy {
+pow(5,5)
+pow (10000.9999,150)
+degreesToRadians(60)
+degreesToRadians(45)
+degreesToRadians (0.8E60)
+sin (1.57079)
+sin (-1)
+cos (1.57079)
+cos (-1)
+tan (1.57079)
+tan (-1)
+tan(degreesToRadians(90))
+
+ */
+public class Trigonometry_MathVsLib_Accuracy {
 	double actual=0.0;
 	double expected=0.0;
 	MyMath mymath=new MyMath();
-	double decimalDigits=0.0001;
+	double decimalDigits=0.001;
 
 	@Test()
-	void accuracyPowpt5() throws FactorialException {
+	public void accuracyPowpt5() throws FactorialException {
 		actual=MyMath.pow(5, 5);
  	   System.out.println("The value of pow(5,5) is " +actual);
 	    //To validate the value of pow(5,5)
-	 	assertEquals(Math.pow(5, 5),actual ,decimalDigits);        
+ 	  assertEquals(Math.pow(5, 5),actual ,decimalDigits);        
            
 	}
 	@Test()
-	void accuracyPow1000to150() throws FactorialException {
+	public void accuracyPow1000to150() throws FactorialException {
 		actual=MyMath.pow(10000.9999,150);
  	   System.out.println("The value of pow(10000.9999,150) is " +actual);
 	    //To validate the value of pow(10000.9999,150)
@@ -30,7 +48,7 @@ class Trigonometry_MathVsLib_Accuracy {
 	}
 	
 	@Test()
-	void accuracyDegToRad60() throws FactorialException {
+	public void accuracyDegToRad60() throws FactorialException {
 		actual=MyMath.degreesToRadian(60);
  	   System.out.println("The value of degreesToRadian(60) is " +actual);
 	    //To validate the value of degreesToRadian(60)
@@ -39,7 +57,7 @@ class Trigonometry_MathVsLib_Accuracy {
 	}
 	
 	@Test()
-	void accuracyDegToRad45() throws FactorialException {
+	public void accuracyDegToRad45() throws FactorialException {
 		actual=MyMath.degreesToRadian(45);
  	   System.out.println("The value of degreesToRadian(45) is " +actual);
 	    //To validate the value of degreesToRadian(45)
@@ -48,7 +66,7 @@ class Trigonometry_MathVsLib_Accuracy {
 	}
 	
 	@Test()
-	void accuracyDegToRadPt8E60() throws FactorialException {
+	public void accuracyDegToRadPt8E60() throws FactorialException {
 		actual=MyMath.degreesToRadian(0.8E60);
  	   System.out.println("The value of degreesToRadian(0.8E60) is " +actual);
 	    //To validate the value of degreesToRadian(0.8E60)
@@ -57,9 +75,9 @@ class Trigonometry_MathVsLib_Accuracy {
 	}
 	
 	@Test()
-	void sin1pt5() throws FactorialException {
+	public void sin1pt5() throws FactorialException {
 		actual=Trigonometry.sin(1.57079);
- 	  // System.out.println("The value of sin(1.57079) is " +actual);
+ 	   System.out.println("The value of sin(1.57079) is " +actual);
 	    //To validate the value of sin(1.57079)
 	 	assertEquals(Math.sin(1.57079),actual ,decimalDigits);        
            
@@ -67,18 +85,18 @@ class Trigonometry_MathVsLib_Accuracy {
 	
 
 	@Test()
-	void sinNeg1() throws FactorialException {
+	public void sinNeg1() throws FactorialException {
 		actual=Trigonometry.sin(-1);
- 	  // System.out.println("The value of sin(-1) is " +actual);
+ 	   System.out.println("The value of sin(-1) is " +actual);
 	    //To validate the value of sin(-1)
 	 	assertEquals(Math.sin(-1),actual ,decimalDigits);        
            
 	}
 	
 	@Test()
-	void cos1pt5() throws FactorialException {
+	public void cos1pt5() throws FactorialException {
 		actual=Trigonometry.cos(1.57079);
- 	  // System.out.println("The value of cos(1.57079) is " +actual);
+ 	    System.out.println("The value of cos(1.57079) is " +actual);
 	    //To validate the value of cos(1.57079)
 	 	assertEquals(Math.cos(1.57079),actual ,decimalDigits);        
            
@@ -86,25 +104,25 @@ class Trigonometry_MathVsLib_Accuracy {
 	
 
 	@Test()
-	void cosNeg1() throws FactorialException {
+	public void cosNeg1() throws FactorialException {
 		actual=Trigonometry.cos(-1);
- 	  // System.out.println("The value of cos(-1) is " +actual);
+ 	    System.out.println("The value of cos(-1) is " +actual);
 	    //To validate the value of cos(-1)
 	 	assertEquals(Math.cos(-1),actual ,decimalDigits);        
            
 	}
 	
 	@Test()
-	void tan1pt5() throws FactorialException {
+	public void tan1pt5() throws FactorialException {
 		actual=Trigonometry.tan(1.57079);
- 	  // System.out.println("The value of tan(1.57079) is " +actual);
+ 	    System.out.println("The value of tan(1.57079) is " +actual);
 	    //To validate the value of tan(1.57079)
 	 	assertEquals(Math.tan(1.57079),actual ,decimalDigits);        
            
 	}
 	
 	@Test()
-	void tanNeg1() throws FactorialException {
+	public void tanNeg1() throws FactorialException {
 		actual=Trigonometry.tan(-1);
 	    //To validate the value of cos(-1)
 	 	assertEquals(Math.tan(-1),actual ,decimalDigits);        
@@ -112,13 +130,14 @@ class Trigonometry_MathVsLib_Accuracy {
 	}
 
 	@Test()
-	void tanDegtoRad90() throws FactorialException {
+	public void tanDegtoRad90() throws FactorialException {
 		actual=Trigonometry.tan(MyMath.degreesToRadian(90));
+		double expected=Math.tan(Math.toRadians(90));
+Assert.assertTrue("Invalid",expected>2147483647&&actual>2147483647 );        
+			
+	
  	    System.out.println("The value of tan(MyMath.degreesToRadian(90) is " +actual);
-		System.out.println(Math.tan(Math.toRadians(90)));
-	    //To validate the value of tan(MyMath.degreesToRadian(90)
-	 	assertEquals(Math.tan(Math.toRadians(90)),actual ,decimalDigits);        
-           
+	    
 	}
 	}
 

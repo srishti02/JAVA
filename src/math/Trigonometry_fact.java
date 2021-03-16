@@ -1,14 +1,24 @@
 package math;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.assertEquals;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Assert;
+import org.junit.Test;
+/*
+ * @author Srishti Jain , Margaret
+ * fact (-2)
+fact (0)
+fact (5)
+fact (5.5)
 
-class Trigonometry_fact {
+ */
+public class Trigonometry_fact {
 	long actual=0;
 	long expected=0;
+	double decimalDigits=0.01;
+
 	@Test()
-	void factneg2() throws FactorialException {
+	public void factneg2() throws FactorialException {
 	    actual=MyMath.fact(-2);
  	   System.out.println("The value of fact(-2) is " +actual);
 	    //To validate the value of fact -2
@@ -17,17 +27,17 @@ class Trigonometry_fact {
 
 
 	@Test()
-	void fact0() throws FactorialException {
+	public void fact0() throws FactorialException {
 	    actual=MyMath.fact(0);
  	   System.out.println("The value of fact(0) is " +actual);
 	    //To validate the value of fact 0
-	 	assertEquals(1,actual , "Expected is :1 Actual is " +actual);        
+	 	assertEquals( "Expected is :1 Actual is " +actual,1,actual ,decimalDigits);        
 
            
 	}
 	
 	@Test()
-	void fact5() throws FactorialException {
+	public void fact5() throws FactorialException {
 	    try {
 			actual=MyMath.fact(5);
 		} catch (FactorialException e) {
@@ -36,17 +46,17 @@ class Trigonometry_fact {
 		}
  	   System.out.println("The value of fact(5) is " +actual);
 	    //To validate the value of fact 5
-	 	assertEquals(120,actual , "Expected is :120 Actual is " +actual);        
+	 	assertEquals("Expected is :120 Actual is " +actual,120,actual ,decimalDigits );        
    
 	}
 
 
 	@Test()
-	void fact5pt5() {
+	public void fact5pt5() {
 	    actual=MyMath.fact(5.5);
  	   System.out.println("The value of fact() is " +actual);
 	    //To validate the value of fact 0
-	 	assertEquals(1,actual , "Expected is :1 Actual is " +actual);        
+	 	assertEquals( "Expected is :1 Actual is " +actual,1,actual ,decimalDigits);        
 
            
 	}
