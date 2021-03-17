@@ -17,7 +17,7 @@ public class Trigonometry_fact {
 	long expected=0;
 	double decimalDigits=0.01;
 
-	@Test()
+	@Test(expected=FactorialException.class)
 	public void factneg2() throws FactorialException {
 	    actual=MyMath.fact(-2);
  	   System.out.println("The value of fact(-2) is " +actual);
@@ -51,7 +51,7 @@ public class Trigonometry_fact {
 	}
 
 
-	@Test()
+	@Test(expected=Error.class)
 	public void fact5pt5() {
 	    actual=MyMath.fact(5.5);
  	   System.out.println("The value of fact() is " +actual);

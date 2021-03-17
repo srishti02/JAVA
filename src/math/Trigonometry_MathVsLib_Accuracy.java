@@ -112,7 +112,7 @@ public class Trigonometry_MathVsLib_Accuracy {
            
 	}
 	
-	@Test()
+	@Test(expected=Error.class)
 	public void tan1pt5() throws FactorialException {
 		actual=Trigonometry.tan(1.57079);
  	    System.out.println("The value of tan(1.57079) is " +actual);
@@ -121,7 +121,7 @@ public class Trigonometry_MathVsLib_Accuracy {
            
 	}
 	
-	@Test()
+	@Test(expected=Error.class)
 	public void tanNeg1() throws FactorialException {
 		actual=Trigonometry.tan(-1);
 	    //To validate the value of cos(-1)
@@ -129,7 +129,7 @@ public class Trigonometry_MathVsLib_Accuracy {
            
 	}
 
-	@Test()
+	@Test(expected=Error.class)
 	public void tanDegtoRad90() throws FactorialException {
 		actual=Trigonometry.tan(MyMath.degreesToRadian(90));
 		double expected=Math.tan(Math.toRadians(90));

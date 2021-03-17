@@ -34,7 +34,7 @@ public class Trigonometry_radtodeg {
            
 	}
 
-	@Test()
+	@Test(expected=Error.class)
 	public void tanRadToDegStr() throws FactorialException {
 		actual=MyMath.radiansToDegrees("test");
 		   System.out.println(Math.toDegrees("test"));

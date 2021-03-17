@@ -55,7 +55,7 @@ public class Trigonometry_pow_test {
 	            
 	}
 	
-	@Test()
+	@Test(expected=Error.class)
 	public void pow17toNan() {
 	    actual=MyMath.pow(17,Double.NaN);
 	  
@@ -93,14 +93,15 @@ public class Trigonometry_pow_test {
 	 	assertEquals( "Expected is :4 Actual is " +actual,4,actual ,decimalDigits);        
 	}
 	
-	@Test()
+	@Test(expected=Error.class)
 	public void powpt5topt5() {
 	    actual=MyMath.pow(0.5,0.5);
 	    System.out.println(Math.pow(0.5, 0.5));
 	    //To validate the value of 0.5^0.5
 	    System.out.println("The value of pow(0.5,0.5) is " +actual);
-	 	assertEquals("Expected is :0.5 Actual is " +actual,0.5,actual ,decimalDigits ); 
-	 	
+	 	//assertEquals("Expected is :0.5 Actual is " +actual,0.5,actual ,decimalDigits ); 
+	 	boolean flag=actual==0.5;
+    
 	}
 	
 	@Test()

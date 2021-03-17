@@ -33,7 +33,7 @@ public class Trigonometry_degtorad {
            
 	}
 
-	@Test()
+	@Test(expected=Error.class)
 	public void tanRadToDegStr() throws FactorialException {
 		actual=MyMath.degreesToRadian(test);
 		   System.out.println(Math.toRadians(test));

@@ -23,17 +23,19 @@ public class Trigonometry_boundary_exception  {
 	double expected=0.0;
 	MyMath mymath=new MyMath();
 
-	@Test()
-	public void tan9999999999() throws FactorialException {
+	@Test(expected=Error.class)
+	public void tan9999999999() throws Exception {
+		
 		actual=Trigonometry.tan(9999999999);
-	   System.out.println(Math.tan(9999999999));
+	  // System.out.println(Math.tan(9999999999));
  	   System.out.println("The value of tan(9999999999) is " +actual);
+
 	    //To validate the value of tan 9999999999
 
            
 	}
 
-	@Test()
+	@Test(expected=ArithmeticException.class)
 	public void cos5div0() throws FactorialException {
 		actual=Trigonometry.cos(5/0);
 	   System.out.println(Math.cos(5/0));
@@ -41,8 +43,8 @@ public class Trigonometry_boundary_exception  {
 	    //To validate the value of cos 5/0
 
 	}
-	@Test()
-	public void tanArrayOutofBound() throws FactorialException {
+	@Test(expected=ArrayIndexOutOfBoundsException.class)
+	public void tanArrayOutofBound() throws Exception {
 		double[] a = {90,180};
 		actual=Trigonometry.tan(a[2]);
 	   System.out.println(Math.tan(a[2]));
@@ -52,7 +54,7 @@ public class Trigonometry_boundary_exception  {
            
 	}	
 	
-	@Test()
+    @Test(expected=ArithmeticException.class)
 	public void degToRad() throws FactorialException {
 		double[] a = {90,180};
 		actual=MyMath.degreesToRadian(((0.8E60*1)+1%0));

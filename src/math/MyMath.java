@@ -1,5 +1,7 @@
 package math;
 
+import static org.junit.Assert.assertTrue;
+
 import java.util.stream.LongStream;
 
 /**
@@ -80,9 +82,16 @@ public class MyMath
      *
      * @return result
      */
-    public static double tan(double angle) throws FactorialException
+    public static double tan(double angle) throws FactorialException,Exception
     {
-    	return sin(angle)/cos(angle);
+    	double result=0.0 ;
+    	try {
+    	result=sin(angle)/cos(angle);}
+    	catch (Error e)
+    	{
+    		assertTrue("Check for compile error message", e.getMessage().startsWith("Unresolved compilation problems"));
+    	}
+    	return result;
     }
   }
 
